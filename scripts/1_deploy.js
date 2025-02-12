@@ -3,7 +3,7 @@ async function main() {
  const Token = await ethers.getContractFactory("Token")
 
     //deploy the contract
- const token = await Token.deploy()
+ const token = await Token.deploy(`GhostRogue`, `GSTRG`, 1000000000)
  await token.deployed()
  console.log(`Token deployed to: ${token.address}`)
   }
